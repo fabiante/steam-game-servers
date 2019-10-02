@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM steam-cmd:latest
 
 # Environment variables
 ENV PORT_STEAM 7778
@@ -17,24 +17,6 @@ RUN echo "fs.file-max=100000" >> /etc/sysctl.conf && sysctl -p
 RUN echo "* soft nofile 1000000" >> /etc/security/limits.conf
 RUN echo "* hard nofile 1000000" >> /etc/security/limits.conf
 RUN echo "session required pam_limits.so" >> /etc/pam.d/root # TODO: Check if this is correctly set
-
-# Required 32-bit arch for steamcmd installation
-RUN dpkg --add-architecture i386
-
-# Update apt-get incl. repos
-RUN apt-get -y update
-RUN apt-get -y upgrade
-
-# Install screen
-RUN apt-get install -y screen
-
-# Fixing SSL error during installation and runtime
-RUN apt-get install --reinstall -y ca-certificates
-# Install steamcmd
-RUN echo "I AGREE" | apt-get install -y steamcmd
-
-# Update Steam
-RUN /usr/games/steamcmd +quit
 
 # Copy start script into image
 COPY start.sh /usr/games/
