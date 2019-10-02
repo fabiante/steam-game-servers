@@ -12,4 +12,4 @@ Simply create an issue or a PR.
 
 ## Supported Servers
 
-- [ARK: Survival Evolved](./servers/ark-survival-evolved-README.md)
+- [ARK: Survival Evolved](./servers/ark-survival-evolved/README.md)
