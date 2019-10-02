@@ -13,6 +13,6 @@ jobs:
     - name: Build the Docker image
       run: docker build ./base --file ./base/Dockerfile --tag fabiante/steam-cmd:next
     - name: Dockerhub login
-      run: $DOCKERHUB_TOKEN | docker login --username fabiante --password-stdin
+      run: echo $DOCKERHUB_TOKEN | docker login --username fabiante --password-stdin
     - name: Push image
       run: docker push fabiante/steam-cmd:next
