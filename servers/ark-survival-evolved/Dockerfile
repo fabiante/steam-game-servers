@@ -25,7 +25,7 @@ RUN dpkg --add-architecture i386
 RUN apt-get -y update
 RUN apt-get -y upgrade
 
-# Install screen and Steamcmd
+# Install screen
 RUN apt-get install -y screen
 
 # Fixing SSL error during installation and runtime
