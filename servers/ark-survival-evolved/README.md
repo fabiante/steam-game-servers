@@ -1,18 +1,17 @@
-# ark-nano 🦕
+# ARK: Survival Evolved 🦕
 
 > This project originally was hosted as [ark-nano](https://github.com/FabianTe/ark-nano).
+> 
+> That's why the README sometimes uses the term `ark-nano`. You are free
+> to choose any terms you want for your local docker images of course.
 
 A minimal way to host your ark server with docker.
 
 *Disclaimer:* This image is still in it's early days. Always backup your saves and configuration files. If you find any bugs or are having problems, let us now in the [issues section](https://github.com/FabianTe/ark-nano/issues)!
 
-## Prequesites
-
-Docker and some knowledge about it of course.
-
 ## Usage
 
-### Build
+### 1. Build
 
 Build the docker image from `Dockerfile`.
 
@@ -20,7 +19,7 @@ Build the docker image from `Dockerfile`.
 $ sudo docker build -t ark-nano .
 ```
 
-### Firewall
+### 2. Firewall
 
 Make sure your server allows the following traffic for incoming and outgoing connections:
 
@@ -33,7 +32,7 @@ Make sure your server allows the following traffic for incoming and outgoing con
 
 Get more information at [ark.gamepedia.com](https://ark.gamepedia.com/Dedicated_Server_Setup#Network).
 
-### Provide Persistence
+### 3. Provide Persistence
 
 You don't want to loose your saves on a docker rebuild.
 Therefore a shared volume is recommended which persists your ark installation.
@@ -52,7 +51,7 @@ backup this folder. If you don't have a backup solution yet you can use
 
 Your saved content will be located under `/usr/games/ark-nano-volume/ShooterGame/Saved/SavedArks/`.
 
-### Run the container
+### 4. Run the container
 
 You can run the container via executing the following line.
 
@@ -65,7 +64,7 @@ It will take care of containers port forwarding, volume sharing and starting of 
 Note: The startup process of an ARK: Survival Evolved server may take up to **half
 an hour** depending on the available hardware. Time for necessary steam updates **not included**. Be very patient!
 
-### Make maintenance easier
+### Maintenance Shortcuts
 
 We have some optional terminal aliases you can use to check, stop or restart your server.
 
@@ -75,7 +74,7 @@ $ sudo ./ark-shortcuts.sh
 
 You can check the aliases function via executing `$ ark-help`.
 
-### Join your game
+### 5. Join your game
 
 You will find your server via entering the name of it into the search bar.
 Set your search category to *Unoffical Servers*.
