@@ -10,7 +10,7 @@ Here is a list of supported servers: [Supported Servers](#supported-servers)
 
 ### Prerequisite
 
-- Basic understanding of Docker: You should be at least to locally build and run images, open ports and map volumes.
+- Basic understanding of Docker: You should be at least be able to locally build and run images, open ports and map volumes.
 - Basic linux skills: You should be able to navigate the fs and do some networking stuff. If you are able to do automated backups you would benefit from that so that you can backup your savegames.
 
 ## Contributing
